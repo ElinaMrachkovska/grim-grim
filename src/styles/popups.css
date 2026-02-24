@@ -1,7 +1,3 @@
-/* ============================================
-   POPUP / MODAL STYLES
-   ============================================ */
-
 .popup-overlay {
   display: none;
   position: fixed; inset: 0;

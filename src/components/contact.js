@@ -1,14 +1,7 @@
-// ============================================
-// COMPONENT — Contact form
-// ============================================
-
 import { validators, validateField } from '../js/validation.js';
 import { submitContactForm }          from '../js/api.js';
 import { openPopup }                  from './popup.js';
 
-/**
- * Attaches the submit handler to the contact form.
- */
 export function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;

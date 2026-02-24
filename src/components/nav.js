@@ -1,10 +1,3 @@
-// ============================================
-// COMPONENT — Navigation (burger + scroll spy)
-// ============================================
-
-/**
- * Initialises the mobile burger menu toggle.
- */
 export function initNav() {
   const burger    = document.getElementById('burgerBtn');
   const mobileNav = document.getElementById('mobileNav');
@@ -16,7 +9,6 @@ export function initNav() {
     burger.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Close mobile nav when a link is clicked
   mobileNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       mobileNav.classList.remove('active');
@@ -25,9 +17,6 @@ export function initNav() {
   });
 }
 
-/**
- * Highlights the nav link for the section currently in view.
- */
 export function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');

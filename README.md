@@ -1,5 +1,7 @@
 # Гурт «Грим та Грім» — Landing Page
 
+Demo: https://elinamrachkovska.github.io/grim-grim/
+
 Лендінг-сторінка для рок-гурту. Реалізований на чистому **HTML / CSS / JavaScript** без фреймворків.
 
 ---

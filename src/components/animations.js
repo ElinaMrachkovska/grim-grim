@@ -1,14 +1,7 @@
-// ============================================
-// COMPONENT — Scroll-triggered fade-in animations
-// ============================================
 
-/**
- * Observes all `.fade-in` elements and adds the
- * `.visible` class once they enter the viewport.
- */
 export function initScrollAnimations() {
   if (!('IntersectionObserver' in window)) {
-    // Fallback: show everything immediately
+   
     document.querySelectorAll('.fade-in').forEach((el) =>
       el.classList.add('visible')
     );
