@@ -1,0 +1,50 @@
+/* ============================================
+   DESIGN TOKENS — Гурт «Грим та Грім»
+   ============================================ */
+
+:root {
+  /* Colors */
+  --bg:       #0d0d0d;
+  --bg2:      #141820;
+  --card:     #1a1f2e;
+  --accent:   #e8294a;
+  --blue:     #42c8ed;
+  --accent2:  #f5c518;
+  --text:     #e8e8e8;
+  --muted:    #8a8f9e;
+  --border:   rgba(255, 255, 255, 0.08);
+
+  /* Typography */
+  --font-head: 'Oswald', sans-serif;
+  --font-body: 'PT Sans', sans-serif;
+
+  /* Spacing scale */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  4rem;
+  --space-2xl: 5rem;
+
+  /* Section padding */
+  --section-pad-y: 80px;
+  --section-pad-x: 5%;
+
+  /* Layout */
+  --nav-height:    60px;
+  --radius-sm:     4px;
+  --radius-md:     8px;
+  --radius-lg:     12px;
+  --max-width:     1200px;
+
+  /* Transitions */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.2s ease;
+  --transition-slow:   0.4s ease;
+
+  /* Z-index layers */
+  --z-base:    1;
+  --z-above:   10;
+  --z-nav:     1000;
+  --z-popup:   2000;
+}

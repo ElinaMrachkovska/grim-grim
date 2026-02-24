@@ -1,0 +1,91 @@
+<!-- ============================================
+     COMPONENT: All popup overlays
+     ============================================ -->
+
+<!-- TICKET popup -->
+<div class="popup-overlay" id="ticketPopup" role="dialog" aria-modal="true" aria-label="Замовити квиток">
+  <div class="popup">
+    <button class="popup-close" data-close-popup aria-label="Закрити">✕</button>
+    <h3>Замовити квиток</h3>
+    <p>Заповни форму для замовлення квитка на концерт</p>
+
+    <div class="popup-concert-info">
+      <strong id="popupVenue"></strong><br>
+      <span id="popupDate"></span> · Залишилось місць: <span id="popupSeats"></span>
+    </div>
+
+    <div class="popup-form-row">
+      <div class="popup-form-group">
+        <label for="pName">Ім'я</label>
+        <input type="text" id="pName" placeholder="Ваше ім'я" autocomplete="name">
+        <span class="field-error" id="pNameErr" aria-live="polite"></span>
+      </div>
+      <div class="popup-form-group">
+        <label for="pEmail">Email</label>
+        <input type="email" id="pEmail" placeholder="email@example.com" autocomplete="email">
+        <span class="field-error" id="pEmailErr" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <div class="popup-form-group">
+      <label for="pPhone">Телефон</label>
+      <input type="tel" id="pPhone" placeholder="+38 (0XX) XXX-XX-XX" autocomplete="tel">
+      <span class="field-error" id="pPhoneErr" aria-live="polite"></span>
+    </div>
+
+    <div class="popup-qty">
+      <label>Кількість квитків:</label>
+      <div class="qty-ctrl">
+        <button class="qty-btn" id="btnQtyDec" aria-label="Зменшити кількість">−</button>
+        <span id="qty-display" aria-live="polite">1</span>
+        <button class="qty-btn" id="btnQtyInc" aria-label="Збільшити кількість">+</button>
+      </div>
+    </div>
+
+    <div class="popup-total">Сума: <strong id="popupTotal">450 ₴</strong></div>
+    <button class="btn-popup-submit" id="btnTicketSubmit">Підтвердити замовлення</button>
+  </div>
+</div>
+
+<!-- MEMBER popup -->
+<div class="popup-overlay" id="memberPopup" role="dialog" aria-modal="true" aria-label="Учасник гурту">
+  <div class="popup">
+    <button class="popup-close" data-close-popup aria-label="Закрити">✕</button>
+    <div style="text-align:center;font-size:4rem;margin-bottom:1rem" id="memberEmoji" aria-hidden="true"></div>
+    <h3 id="memberName"></h3>
+    <p style="color:var(--accent);margin-bottom:0.8rem" id="memberRole"></p>
+    <p id="memberBio"></p>
+  </div>
+</div>
+
+<!-- TICKET SUCCESS popup -->
+<div class="popup-overlay" id="successPopup" role="alertdialog" aria-modal="true" aria-label="Замовлення прийнято">
+  <div class="popup popup-success">
+    <button class="popup-close" data-close-popup aria-label="Закрити">✕</button>
+    <div class="success-icon" aria-hidden="true">✅</div>
+    <h3>Замовлення прийнято!</h3>
+    <p>Дякуємо! Деталі замовлення надіслано на вашу електронну пошту. До зустрічі на концерті!</p>
+    <button class="btn-popup-submit" data-close-popup>Чудово!</button>
+  </div>
+</div>
+
+<!-- CONTACT SUCCESS popup -->
+<div class="popup-overlay" id="contactSuccessPopup" role="alertdialog" aria-modal="true" aria-label="Повідомлення надіслано">
+  <div class="popup popup-success">
+    <button class="popup-close" data-close-popup aria-label="Закрити">✕</button>
+    <div class="success-icon" aria-hidden="true">📬</div>
+    <h3>Повідомлення надіслано!</h3>
+    <p>Дякуємо за звернення! Ми зв'яжемося з вами найближчим часом.</p>
+    <button class="btn-popup-submit" data-close-popup>Добре!</button>
+  </div>
+</div>
+
+<!-- SOCIAL popup -->
+<div class="popup-overlay" id="socialPopup" role="dialog" aria-modal="true" aria-label="Соцмережа">
+  <div class="popup">
+    <button class="popup-close" data-close-popup aria-label="Закрити">✕</button>
+    <h3 id="socialName"></h3>
+    <p>Наша сторінка в <span id="socialPlatform"></span> скоро буде доступна. Слідкуй за новинами!</p>
+    <button class="btn-popup-submit" data-close-popup>Зрозуміло</button>
+  </div>
+</div>

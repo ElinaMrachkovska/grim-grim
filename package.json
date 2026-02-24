@@ -1,0 +1,17 @@
+{
+  "name": "grim-grim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "browser-sync start --server --files 'index.html, src/**/*.css, src/**/*.js'",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gh-pages": "^6.3.0"
+  }
+}
