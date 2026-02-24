@@ -1,0 +1,55 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* ---- Tablet & below (≤ 768px) ---- */
+@media (max-width: 768px) {
+  .nav-links    { display: none; }
+  .nav-burger   { display: flex; }
+  .hero-crowd   { display: none; }
+
+  #hero { padding: 100px var(--section-pad-x) 60px; }
+
+  .about-inner {
+   float: none;
+  }
+  .about-img-wrap {  float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1.5rem; }
+
+  .contact-inner    { grid-template-columns: 1fr; }
+  .members-grid     { grid-template-columns: 1fr 1fr; }
+  .form-row         { grid-template-columns: 1fr; }
+  .popup-form-row   { grid-template-columns: 1fr; }
+
+  /* Stacked table on mobile */
+  table thead { display: none; }
+  table tr {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  table td {
+    display: block;
+    padding: 4px 16px;
+    border: none;
+  }
+  table td:last-child {
+    text-align: left;
+    padding-top: 10px;
+  }
+}
+
+/* ---- Mobile (≤ 480px) ---- */
+@media (max-width: 480px) {
+  .members-grid { grid-template-columns: 1fr; }
+
+  .popup {
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}

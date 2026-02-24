@@ -1,0 +1,47 @@
+<!-- ============================================
+     BLOCK: Contact / Form + Map
+     ============================================ -->
+<section id="contact">
+  <h2 class="section-title fade-in">Зв'яжись з нами</h2>
+  <p class="subtitle fade-in">Хочеш замовити виступ або маєш питання? Пиши!</p>
+
+  <div class="contact-inner fade-in">
+
+    <!-- Contact form -->
+    <form id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cName">Ім'я</label>
+          <input type="text" id="cName" name="name" placeholder="Твоє ім'я" autocomplete="name">
+          <span class="field-error" id="cNameErr" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" name="email" placeholder="email@example.com" autocomplete="email">
+          <span class="field-error" id="cEmailErr" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom:1rem">
+        <label for="cMsg">Повідомлення</label>
+        <textarea id="cMsg" name="message" placeholder="Розкажи про свої ідеї..."></textarea>
+        <span class="field-error" id="cMsgErr" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="btn-submit">Відправити</button>
+    </form>
+
+    <!-- Map -->
+    <div class="map-wrap">
+      <div class="map-title">Наше місцезнаходження</div>
+      <iframe
+        loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.562!2d30.5234!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4e65f5f0bd%3A0x2f96e5dfe0f99999!2sKyiv%2C%20Ukraine!5e0!3m2!1sen!2s!4v1699000000000"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Kyiv, Ukraine map">
+      </iframe>
+    </div>
+
+  </div>
+</section>

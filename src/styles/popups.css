@@ -1,0 +1,159 @@
+/* ============================================
+   POPUP / MODAL STYLES
+   ============================================ */
+
+.popup-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  z-index: var(--z-popup);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+.popup-overlay.active { display: flex; }
+
+.popup {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 440px;
+  width: 90%;
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.popup-close {
+  position: absolute; top: 14px; right: 14px;
+  background: none; border: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+.popup-close:hover { color: var(--text); }
+
+.popup h3 {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent2);
+}
+.popup p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Concert info block inside ticket popup */
+.popup-concert-info {
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+.popup-concert-info strong { color: var(--text); }
+.popup-concert-info span  { color: var(--muted); font-size: 0.9rem; }
+
+/* Form rows inside popups */
+.popup-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.popup-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0.8rem;
+}
+.popup-form-group label { font-size: 0.8rem; color: var(--muted); }
+.popup-form-group input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-family: var(--font-body);
+  transition: border-color var(--transition-base);
+}
+.popup-form-group input:focus { border-color: rgba(232,41,74,0.6); }
+.popup-form-group input.error { border-color: var(--accent); }
+
+/* Quantity control */
+.popup-qty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+.popup-qty label { font-size: 0.9rem; color: var(--text); }
+
+.qty-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qty-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 28px; height: 28px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background var(--transition-base);
+}
+.qty-btn:hover { background: rgba(255,255,255,0.2); }
+
+#qty-display {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.popup-total {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+.popup-total strong {
+  color: var(--accent2);
+  font-size: 1.1rem;
+}
+
+/* Primary action inside popup */
+.btn-popup-submit {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-base);
+  letter-spacing: 0.5px;
+}
+.btn-popup-submit:hover { background: #c41e3a; }
+
+/* Success state */
+.popup-success h3 { color: #4caf84; }
+.popup-success .success-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
