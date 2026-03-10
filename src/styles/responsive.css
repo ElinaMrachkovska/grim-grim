@@ -1,8 +1,3 @@
-/* ============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================ */
-
-/* ---- Tablet & below (≤ 768px) ---- */
 @media (max-width: 768px) {
   .nav-links    { display: none; }
   .nav-burger   { display: flex; }
@@ -23,7 +18,6 @@
   .form-row         { grid-template-columns: 1fr; }
   .popup-form-row   { grid-template-columns: 1fr; }
 
-  /* Stacked table on mobile */
   table thead { display: none; }
   table tr {
     display: block;
@@ -41,7 +35,6 @@
   }
 }
 
-/* ---- Mobile (≤ 480px) ---- */
 @media (max-width: 480px) {
   .members-grid { grid-template-columns: 1fr; }
 

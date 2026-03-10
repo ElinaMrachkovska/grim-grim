@@ -1,18 +1,10 @@
-// ============================================
-// MAIN — Application entry point
-// ============================================
-
 import { initNav, initScrollSpy }           from '../components/nav.js';
 import { initPopups, openPopup }             from '../components/popup.js';
 import { initTicketPopup, openTicketPopup }  from '../components/ticket.js';
 import { initContactForm }                   from '../components/contact.js';
 import { initScrollAnimations }              from '../components/animations.js';
 
-// ============================================
-// BLOCK LOADER
-// Завантажує HTML-файл блоку і вставляє в контейнер.
-// Повертає Promise — щоб ініціалізація JS чекала на DOM.
-// ============================================
+
 async function loadBlock(containerId, file) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -27,9 +19,6 @@ async function loadBlock(containerId, file) {
   }
 }
 
-// ============================================
-// EVENT WIRING
-// ============================================
 
 function initTicketButtons() {
   document.querySelectorAll('.btn-ticket[data-venue]').forEach((btn) => {
@@ -63,13 +52,8 @@ function initSocialLinks() {
   });
 }
 
-// ============================================
-// BOOTSTRAP
-// Порядок важливий: спочатку завантажити всі блоки,
-// потім ініціалізувати JS (бо DOM ще не існує до fetch)
-// ============================================
 async function bootstrap() {
-  // 1. Завантажуємо всі блоки паралельно
+
   await Promise.all([
     loadBlock('block-nav',      'nav.html'),
     loadBlock('block-hero',     'hero.html'),
@@ -80,7 +64,6 @@ async function bootstrap() {
     loadBlock('block-footer',   'footer.html'),
   ]);
 
-  // 2. Ініціалізуємо компоненти (DOM вже готовий)
   initPopups();
   initNav();
   initScrollSpy();

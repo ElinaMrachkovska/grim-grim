@@ -1,7 +1,3 @@
-/* ============================================
-   BASE RESET & GLOBAL STYLES
-   ============================================ */
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -45,7 +41,7 @@ input, textarea {
   font-family: var(--font-body);
 }
 
-/* Utility: fade-in animation hook */
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -65,5 +61,5 @@ input, textarea {
 #block-contact,
 #block-footer,
 #block-popups {
-  display: contents; /* ← div-обгортки стають "прозорими" для layout */
+  display: contents;
 }

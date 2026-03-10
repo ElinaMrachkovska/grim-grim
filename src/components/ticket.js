@@ -1,7 +1,3 @@
-// ============================================
-// COMPONENT — Ticket order popup
-// ============================================
-
 import { TICKET_PRICE }               from '../js/data.js';
 import { validators, validateField, clearErrors } from '../js/validation.js';
 import { submitTicketOrder }           from '../js/api.js';
@@ -9,12 +5,6 @@ import { openPopup, closePopup }       from './popup.js';
 
 let qty = 1;
 
-/**
- * Opens the ticket popup pre-filled with concert info.
- * @param {string} venue
- * @param {string} date
- * @param {string} seats
- */
 export function openTicketPopup(venue, date, seats) {
   qty = 1;
 
@@ -32,19 +22,12 @@ export function openTicketPopup(venue, date, seats) {
   openPopup('ticketPopup');
 }
 
-/**
- * Adjusts the ticket quantity (+/-) and updates the total.
- * @param {number} delta
- */
 export function changeQty(delta) {
   qty = Math.max(1, Math.min(10, qty + delta));
   document.getElementById('qty-display').textContent = qty;
   document.getElementById('popupTotal').textContent  = `${qty * TICKET_PRICE} ₴`;
 }
 
-/**
- * Validates and submits the ticket order form.
- */
 export async function submitTicket() {
   const nameOk  = validateField('pName',  'pNameErr',  validators.name);
   const emailOk = validateField('pEmail', 'pEmailErr', validators.email);
@@ -75,7 +58,6 @@ export async function submitTicket() {
   openPopup('successPopup');
 }
 
-/** Wires up qty buttons once DOM is ready */
 export function initTicketPopup() {
   document.getElementById('btnQtyDec')?.addEventListener('click', () => changeQty(-1));
   document.getElementById('btnQtyInc')?.addEventListener('click', () => changeQty(+1));
